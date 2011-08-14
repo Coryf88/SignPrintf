@@ -1,0 +1,35 @@
+# eclipse
+/.classpath
+/.project
+/.settings
+
+# netbeans
+/nbproject
+
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# ant
+/build.xml
+
+# maven
+/target
+
+# vim
+.*.sw[a-p]
+
+# various other potential build files
+/build
+/bin
+/dist
+/manifest.mf
+/world
+
+# OS generated/leftover files
+thumbs.db
+ehthumbs.db
+desktop.ini
+.DS_Store

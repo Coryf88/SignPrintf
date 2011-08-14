@@ -1,0 +1,31 @@
+name: SignPrintf
+main: com.coryf88.bukkit.signprintf.SignPrintf
+version: 0.0.1
+author: Coryf88
+description: Sign formatting syntax similar to C's printf. Based on SignPrintf v1.42 for hMod by STJrInuyasha.
+commands:
+  signhelp:
+    description: Display help and formatting codes.
+    usage: "Usage: /<command> [page]"
+  waypoints:
+    description: Shows your waypoints. -a shows all waypoints in use. Specifing a player's name shows that player's waypoints. (-a/username usage depends on your permissions)
+    usage: /<command> [-a|username]
+  signwarp:
+    description: Teleport to a sign waypoint.
+    usage: /<command> <waypoint>
+permissions:
+    signprintf:
+        description: Gives access to all SignPrintf permissions.
+        children:
+            signprintf.listwaypoints: true
+            signprintf.createwarp: true
+            signprintf.removesigns: true
+    signprintf.listwaypoints:
+        description: Allow the player to list all waypoints, or waypoints created by a player.
+        default: op
+    signprintf.createwarp:
+        description: Allow the player to create warp and waypoint signs. (%#w and %#W)
+        default: op
+    signprintf.removesigns:
+        description: Allow the player to break signs they do not own.
+        default: op
